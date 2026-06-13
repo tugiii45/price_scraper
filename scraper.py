@@ -34,7 +34,7 @@ def get_exchange_rate(target_currency="USD"):
     except Exception as e:
         # High-accuracy historical fallback rate if API breaks (approx 1 KES = 0.0076 USD)
         fallback = 0.0076
-        print(f"⚠️ Exchange Rate API Error: {e}. Using local currency exchange rate: 1 KES = {fallback} USD")
+        print(f"Exchange Rate API Error: {e}. Using local currency exchange rate: 1 KES = {fallback} USD")
         return fallback
 
 
@@ -90,7 +90,7 @@ def scrape_jumia(url):
         return products
 
     except requests.exceptions.RequestException as e:
-        print(f"⚠️ Scraping Error: Failed to reach Jumia. Reason: {e}")
+        print(f"Scraping Error: Failed to reach Jumia. Reason: {e}")
         return []
 
 
@@ -119,9 +119,9 @@ def main():
     # 5. Export to CSV
     try:
         df.to_csv(OUTPUT_FILE, index=False, encoding="utf-8")
-        print(f"🎉 Success! Jumia data saved cleanly to '{OUTPUT_FILE}'.")
+        print(f"Success! Jumia data saved cleanly to '{OUTPUT_FILE}'.")
     except Exception as e:
-        print(f"⚠️ Failed to write to CSV: {e}")
+        print(f"Failed to write to CSV: {e}")
 
 
 if __name__ == "__main__":
