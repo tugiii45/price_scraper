@@ -9,7 +9,7 @@ A Python-based web scraper that extracts product information from Jumia Kenya, c
 - **Live Currency Conversion:** Connects to the ExchangeRate-API to fetch real-time KES to USD exchange rates, with a reliable built-in fallback rate.
 - **Data Structuring:** Cleans raw string price data (e.g., handling "KSh" prefixes and range prices) and processes it using `pandas`.
 - **Beautiful Output:** Displays the data in a highly readable tabular format directly in the terminal and automatically exports a formatted `jumia_converted_prices.json` file.
-
+- **Interactive Currency Selection:** Prompts the user for a 3-letter currency code (e.g., USD, EUR, UGX) to dynamically convert and display prices on the fly.
 
 ## File Structure
 
